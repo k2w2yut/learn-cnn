@@ -13,6 +13,7 @@ pipeline {
                 steps{
                   retry(3){
                     bat 'echo('testing jenkins echo')'
+                    bat 'echo('testing jenkins echo 2')'
                     bat 'set'
                   }
                   timeout(time:3 unit: 'SECONDS'){

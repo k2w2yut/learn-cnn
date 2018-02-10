@@ -3,16 +3,27 @@
 //another comment
 //we need to run jenkins pipeline
 
-pipeline {
-    agent { docker 'python:3.5.1' }
-    stages {
-        stage('build') {
-            steps {
-                sh  'python --version'
-            }
+// pipeline {
+//     agent { docker 'python' }
+//     stages {
+//         stage('build') {
+//             steps {
+//                 sh  'python --version'
+//             }
+//         }
+//     }
+// }
+
+node('docker') {
+    checkout scm
+    stage('Build') {
+        docker.image('python:3.5.1').inside {
+            sh 'python --version'
         }
     }
 }
+
+
 
 // pipeline {
 //     agent { docker 'python:3.5.1' }

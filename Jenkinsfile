@@ -2,7 +2,6 @@
 #add another comment
 #another comment
 #we need to run jenkins pipeline
-echo(testing)
 
 pipeline {
     agent { docker 'python:3.5.1' }

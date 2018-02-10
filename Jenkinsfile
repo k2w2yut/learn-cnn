@@ -4,7 +4,7 @@
 //we need to run jenkins pipeline
 
 pipeline {
-    agent { docker 'python' }
+    //agent { docker 'python' }
     stages {
         stage('build') {
             steps {

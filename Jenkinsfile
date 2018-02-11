@@ -9,10 +9,12 @@ pipeline {
         stage('build') {
             steps {
                 sh  'python --version'
+                sh  'echo "this is inside python"'
             }
         }
     }
 }
+
 
 // node('docker') {
 //     checkout scm

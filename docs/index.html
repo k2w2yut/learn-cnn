@@ -1,3 +1,33 @@
 <html>
-  testing
+
+1. learn Jenkins
+    java -jar jenkins.war
+    init jenkins, user.password
+    create pipelinefile to own github repo
+    create jenkins_test with example code
+    mv jenkinsFile
+    mv jenkinsFile /jenkinsFile
+2. Things went bad
+    Docker failed to start
+    - someting related to virtual hdd
+      - mainly Hyper-V feature
+      - [from Google, SO]
+        - cause Windows permission issue
+          - solve change folder to d: //drive for dev.
+        - cause experimental feature
+          - solve turn it off
+    reset system/host Windows
+    Docker came back to life
+3. Come back to jenkins
+    Jenkins can access to Agent now
+    nohup not found
+      - add {Git}/bin to Windows's PATH
+      - mklink {Git}/usr/bin/nohup.exe {Git}/bin/nohup.exe
+        //with others essential dll
+      - don't forget to reset Jenkins (since powershell/cmd does not refresh PATH automatically)
+    set Jenkins shell to win32/cmd
+      - seems didn't work
+4. Install Jenkins as Windows service
+    requires new init, no problem
+
 </html>

@@ -8,8 +8,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh  'python --version'
-                sh  'echo "this is inside python"'
+                bat  'python --version'
+                bat  'echo "this is inside python"'
             }
         }
     }
